@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>hayyuk</title>
+        <style>
+            * {
+                margin:0px;
+                padding:0px;
+                box-sizing:border-box;
+            }
+            body {
+                 background-image: url(gambar.jpg.jpg);
+                 background-size: cover;
+                 background-position-y: center;
+            }
+            
+            @keyframes cahaya {
+               from {
+                    text-shadow: 0 0 0px gold,0 0 0px rgb(255, 187, 0);
+               }
+               to {
+                text-shadow:0 0 30px rgb(255, 204, 0),0 0 40px rgb(255, 213, 0),0 0 50px rgb(255, 213, 0);
+               }
+               
+            }
+            @keyframes  gerak{
+                0%,100% {transform: rotate(3deg);}
+                50% {transform: rotate(-3deg);}
+            }
+            @keyframes turun {
+                from {
+                    transform: translatex(-100%);
+                    opacity: 0;
+                }
+                to {
+                    transform: translatex(0);
+                    opacity: 1;
+                }
+            }
+            h1 {
+                text-align: center;
+                color: red;
+                margin:30px;
+                font-size: 50px;
+                font-style: italic;
+                -webkit-text-stroke:1px gold;
+                animation:cahaya 3s infinite alternate,gerak 3s infinite,turun 3s;
+            }
+            p {
+                text-align: center;
+                color:transparent;
+                font-size: 20px;
+                -webkit-text-stroke: 0.3px gold;
+                text-shadow: 0 0 30px gold;
+                animation: turun 3s;
+            }
+            img {
+                padding:0px;
+                display:block;
+                margin: 0 auto;
+                border: 5px solid whitesmoke;
+                transition: 1s;
+                animation: turun 3s;
+            }
+            img:hover {
+                width: 310px;
+                transform: scale(1.1);
+            }
+            button {
+                background-color: rgb(0, 255, 17);
+                padding: 0;
+                display:block;
+                margin: 0 auto;
+                transition: 0.1s;
+            }
+            button:hover {
+                background-color: rgb(52, 145, 52);
+            }
+            h2 {
+                text-align: center;
+                color:transparent;
+                animation: chy 3s infinite alternate;
+                -webkit-text-stroke: 1px rgb(255, 0, 0);
+                text-shadow:0 0 40px rgb(255, 0, 0),0 0 50px rgb(255, 0, 0),0 0 60px rgb(255, 0, 0);
+                animation: turun 3s;
+            }
+            .tombol input{
+                size: 2px;
+                border:none;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>LAMBORGHINI</h1>
+        <img src="gambar.jpg.jpg" width="300">
+        <h2>KETERANGAN</h2>
+        <p> di bilang keterangan malah keterangan</p>
+        <button onclick="alert('cihuyy')">tekan</button>
+    </body>
+</html>
